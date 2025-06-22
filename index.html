@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InvestEarly Calculator</title>
+    <title>InvestEarly Smart Investment Planner</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <h1>🚀 InvestEarly Calculator</h1>
+    <h1>💸 InvestEarly Smart Investment Planner</h1>
 
     <label>💼 Monthly Salary (₹):</label><br>
     <input type="text" id="salary" placeholder="Enter salary" oninput="formatInput(this)"><br><br>
@@ -16,15 +16,15 @@
     <label>🧾 Monthly Expenses (₹):</label><br>
     <input type="text" id="expenses" placeholder="Enter expenses" oninput="formatInput(this)"><br><br>
 
+    <label>🎯 Goal Amount (₹):</label><br>
+    <input type="text" id="goal" placeholder="Enter goal amount" oninput="formatInput(this)"><br><br>
+
     <label>📉 Investment Risk Level:</label><br>
     <select id="risk" onchange="calculate()">
         <option value="Low">Low</option>
         <option value="Medium">Medium</option>
         <option value="High">High</option>
     </select><br><br>
-
-    <label>🎯 Goal Amount (₹):</label><br>
-    <input type="text" id="goal" placeholder="Enter goal amount" oninput="formatInput(this)"><br><br>
 
     <div class="button-container">
         <button onclick="calculate()">Calculate</button>
