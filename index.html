@@ -11,23 +11,25 @@
     <h1>🚀 InvestEarly Calculator</h1>
 
     <label>💼 Monthly Salary (₹):</label><br>
-    <input type="text" id="salary" placeholder="Enter salary"><br><br>
+    <input type="text" id="salary" placeholder="Enter salary" oninput="formatInput(this)"><br><br>
 
     <label>🧾 Monthly Expenses (₹):</label><br>
-    <input type="text" id="expenses" placeholder="Enter expenses"><br><br>
+    <input type="text" id="expenses" placeholder="Enter expenses" oninput="formatInput(this)"><br><br>
 
     <label>📉 Investment Risk Level:</label><br>
-    <select id="risk">
+    <select id="risk" onchange="calculate()">
         <option value="Low">Low</option>
         <option value="Medium">Medium</option>
         <option value="High">High</option>
     </select><br><br>
 
     <label>🎯 Goal Amount (₹):</label><br>
-    <input type="text" id="goal" placeholder="Enter goal amount"><br><br>
+    <input type="text" id="goal" placeholder="Enter goal amount" oninput="formatInput(this)"><br><br>
 
-    <button onclick="calculate()">Calculate</button>
-    <button onclick="clearFields()" style="background-color: #dc3545; margin-left: 10px;">Clear</button>
+    <div class="button-container">
+        <button onclick="calculate()">Calculate</button>
+        <button onclick="clearFields()" class="clear-btn">Clear</button>
+    </div>
 
     <div class="result-chart-container">
         <div>
