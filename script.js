@@ -35,6 +35,7 @@ function calculate() {
     let fd = 0, mutualFunds = 0, stocks = 0, gold = 0, crypto = 0, emergencyFund = 0;
     let annualReturnRate;
 
+    // ✅ Fix: Higher risk gives higher returns (Lower years)
     if (risk === "Low") {
         fd = availableInvestment * 0.40;
         mutualFunds = availableInvestment * 0.20;
@@ -52,12 +53,12 @@ function calculate() {
         emergencyFund = availableInvestment * 0.05;
         annualReturnRate = 0.10;
     } else if (risk === "High") {
-        fd = availableInvestment * 0.32;
-        mutualFunds = availableInvestment * 0.16;
-        stocks = availableInvestment * 0.08;
-        gold = availableInvestment * 0.08;
-        crypto = availableInvestment * 0.04;
-        emergencyFund = availableInvestment * 0.20;
+        fd = availableInvestment * 0.20;
+        mutualFunds = availableInvestment * 0.30;
+        stocks = availableInvestment * 0.25;
+        gold = availableInvestment * 0.10;
+        crypto = availableInvestment * 0.10;
+        emergencyFund = availableInvestment * 0.05;
         annualReturnRate = 0.15;
     }
 
