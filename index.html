@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvestEarly Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>🚀 InvestEarly Calculator</h1>
+
+    <label>💼 Monthly Salary (₹):</label><br>
+    <input type="text" id="salary" placeholder="Enter salary"><br><br>
+
+    <label>🧾 Monthly Expenses (₹):</label><br>
+    <input type="text" id="expenses" placeholder="Enter expenses"><br><br>
+
+    <label>📉 Investment Risk Level:</label><br>
+    <select id="risk">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+    </select><br><br>
+
+    <label>🎯 Goal Amount (₹):</label><br>
+    <input type="text" id="goal" placeholder="Enter goal amount"><br><br>
+
+    <button onclick="calculate()">Calculate</button>
+    <button onclick="clearFields()" style="background-color: #dc3545; margin-left: 10px;">Clear</button>
+
+    <div class="result-chart-container">
+        <div>
+            <h2>📊 Investment Breakdown</h2>
+            <div id="result"></div>
+        </div>
+        <div>
+            <canvas id="investmentChart" width="400" height="400"></canvas>
+        </div>
+    </div>
+
+    <p style="text-align:center; margin-top:30px;">Made with ❤️ at InvestEarly.co.in</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
