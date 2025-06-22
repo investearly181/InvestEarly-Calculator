@@ -6,7 +6,7 @@ body {
     background-color: #f2f2f2;
 }
 
-input, select, button {
+input, select {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -14,11 +14,26 @@ input, select, button {
 }
 
 button {
-    background-color: #28a745;
-    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
-    font-size: 18px;
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+button:not(.clear-btn) {
+    background-color: #28a745;
+    color: white;
+}
+
+.clear-btn {
+    background-color: #dc3545;
+    color: white;
 }
 
 button:hover {
