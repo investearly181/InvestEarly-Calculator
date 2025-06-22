@@ -8,6 +8,13 @@ function formatNumber(value) {
     return value.toLocaleString('en-IN');
 }
 
+function formatInput(input) {
+    let value = input.value.replace(/,/g, '');
+    if (!isNaN(value) && value !== '') {
+        input.value = Number(value).toLocaleString('en-IN');
+    }
+}
+
 function calculate() {
     let salaryInput = document.getElementById("salary").value;
     let expensesInput = document.getElementById("expenses").value;
