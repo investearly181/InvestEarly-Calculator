@@ -77,7 +77,7 @@ function calculate() {
         📈 Mutual Funds Allocation: ₹${formatNumber(mutualFunds)}<br>
         🧾 Stocks Allocation: ₹${formatNumber(stocks)}<br>
         🪙 Gold Allocation: ₹${formatNumber(gold)}<br>
-        ₿ Crypto Allocation (Bitcoin): ₹${formatNumber(crypto)}<br>
+        ₿ Crypto Allocation(Bitcoin): ₹${formatNumber(crypto)}<br>
         🚨 Emergency Fund: ₹${formatNumber(emergencyFund)}<br>
         ⏳ Estimated Years to Reach Goal: ${estimatedYears.toFixed(1)} years
     `;
