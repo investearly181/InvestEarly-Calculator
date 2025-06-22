@@ -35,14 +35,14 @@ function calculate() {
     let fd = 0, mutualFunds = 0, stocks = 0, gold = 0, crypto = 0, emergencyFund = 0;
     let annualReturnRate;
 
-    // ✅ Fix: Higher risk gives higher returns (Lower years)
+    // Risk-Based Allocation & Return Rates (Higher Risk → Higher Return → Less Years)
     if (risk === "Low") {
         fd = availableInvestment * 0.40;
         mutualFunds = availableInvestment * 0.20;
         stocks = availableInvestment * 0.10;
         gold = availableInvestment * 0.10;
         crypto = availableInvestment * 0.05;
-        emergencyFund = availableInvestment * 0.20;
+        emergencyFund = availableInvestment * 0.15;
         annualReturnRate = 0.06;
     } else if (risk === "Medium") {
         fd = availableInvestment * 0.30;
@@ -77,7 +77,7 @@ function calculate() {
         📈 Mutual Funds Allocation: ₹${formatNumber(mutualFunds)}<br>
         🧾 Stocks Allocation: ₹${formatNumber(stocks)}<br>
         🪙 Gold Allocation: ₹${formatNumber(gold)}<br>
-        ₿ Crypto Allocation: ₹${formatNumber(crypto)}<br>
+        ₿ Crypto Allocation (Bitcoin): ₹${formatNumber(crypto)}<br>
         🚨 Emergency Fund: ₹${formatNumber(emergencyFund)}<br>
         ⏳ Estimated Years to Reach Goal: ${estimatedYears.toFixed(1)} years
     `;
